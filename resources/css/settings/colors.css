@@ -1,0 +1,8 @@
+:root {
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-gray-1: #F8F8F9;
+    --body-background-color: var(--color-gray-1);
+    --header-background-color: var(--color-white);
+    --header-link-color: var(--color-black);
+}

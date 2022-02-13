@@ -1,0 +1,8 @@
+:root {
+    /* Screen resolutions */
+    --max-width: 1280px;
+    --mobile-width: 730px;
+
+    /* Global margins and paddings */
+    --global-padding: 20px;
+}
