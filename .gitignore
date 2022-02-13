@@ -14,3 +14,11 @@ yarn-error.log
 /.idea
 /.vscode
 .DS_Store
+
+/vendor
+/node_modules
+Homestead.yaml
+Homestead.json
+.env
+/public/css/
+/public/js/

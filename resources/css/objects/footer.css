@@ -1,0 +1,9 @@
+.footer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.footer > .text {
+    text-align: center;
+    font-size: var(--footer-text-size);
+}

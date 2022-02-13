@@ -1,6 +1,5 @@
 .home {
     background-color: var(--home-background-color);
-    padding-bottom: 30px;
     padding-top: 30px;
     border-top: 1px solid var(--home-border-color);
 }
@@ -23,4 +22,49 @@
 
 .home .call-to-action .button {
     margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.home .how-it-works {
+    background-color: var(--home-how-it-works-background-color);
+    padding-bottom: 20px;
+}
+
+.home .how-it-works .title {
+    color: var(--home-how-it-works-title-color);
+    font-size: var(--home-how-it-works-title-size);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.home .how-it-works .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;;
+}
+
+@media (max-width: 730px) {
+    .home .how-it-works .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.home .how-it-works .card {
+    background-color: var(--home-how-it-works-card-background-color);
+    border-radius: var(--global-border-radius);
+    padding: 20px;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%);
+}
+
+.home .how-it-works .topic {
+    font-weight: 600;
+    font-size: var(--home-how-it-works-card-topic-size);
+    color: var(--home-how-it-works-card-topic-color);
+}
+
+.home .how-it-works .description {
+    font-size: var(--home-how-it-works-card-description-size);
+    color: var(--home-how-it-works-card-description-color);
+    margin-top: 10px;
 }

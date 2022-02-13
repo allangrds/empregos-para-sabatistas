@@ -26,4 +26,9 @@
     --home-border-color: var(--color-gray-4);
     --home-call-to-action-title-color: var(--color-black);
     --home-call-to-action-subtitle-color: var(--color-gray-3);
+    --home-how-it-works-background-color: var(--color-blue-1);
+    --home-how-it-works-title-color: var(--color-white);
+    --home-how-it-works-card-background-color: var(--color-white);
+    --home-how-it-works-card-topic-color: var(--color-black);
+    --home-how-it-works-card-description-color: var(--color-gray-3);
 }
