@@ -3,8 +3,12 @@
     box-shadow: 0 2px 2px rgb(0 0 0 / 8%);
 }
 
+.header .logo {
+    max-width: 230px;
+}
+
 .header .title {
-    font-size: 1.3rem;
+    font-size: var(--header-title-size);
     font-weight: 600;
 }
 
@@ -27,9 +31,13 @@
 .header .link {
     color: var(--header-link-color);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: var(--header-menu-link-size);
+    text-transform: lowercase;
 }
 
+.header .link.active {
+    color: var(--header-link-active-color);
+}
 
 @media (max-width: 730px)
 {

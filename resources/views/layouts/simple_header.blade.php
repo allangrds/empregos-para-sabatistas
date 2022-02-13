@@ -2,19 +2,40 @@
     <div class="wrapper">
         <div class="container">
             <div class="navigation-container">
-                <h1 class="title">
-                    Empregos para Sabatistas
-                </h1>
+                <a
+                    class="logo"
+                    href="{{ route('user.home') }}"
+                >
+                    <img
+                        src="{{ asset('images/logo.svg') }}"
+                        alt="Texto escrito empregos para sabatistas"
+                    />
+                </a>
                 <nav class="navigation">
                     <ul class="menu-list">
                         <li>
-                            <a class="link" href="{{ route('user.home') }}">início</a>
+                            <a
+                                class="link {{ (Route::currentRouteName() === 'user.home') ? 'active' : ''}}"
+                                href="{{ route('user.home') }}"
+                            >
+                                início
+                            </a>
                         </li>
                         <li>
-                            <a class="link" href="{{ route('user.jobs') }}">vagas</a>
+                            <a
+                            class="link {{ (Route::currentRouteName() === 'user.jobs') ? 'active' : ''}}"
+                                href="{{ route('user.jobs') }}"
+                            >
+                                vagas
+                            </a>
                         </li>
                         <li>
-                            <a class="link" href="{{ route('user.publish-jobs') }}">publique uma vaga</a>
+                            <a
+                                class="link {{ (Route::currentRouteName() === 'user.publish-jobs') ? 'active' : ''}}"
+                                href="{{ route('user.publish-jobs') }}"
+                            >
+                                publique uma vaga
+                            </a>
                         </li>
                     </ul>
                 </nav>

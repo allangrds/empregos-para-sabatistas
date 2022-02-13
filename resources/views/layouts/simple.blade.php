@@ -13,10 +13,8 @@
     <body>
         @include('layouts.simple_header')
 
-        <div class="wrapper">
-            <div class="container">
-                @yield('content')
-            </div>
-        </div>
+        <main>
+            @yield('content')
+        </main>
     </body>
 </html>

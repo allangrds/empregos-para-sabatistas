@@ -2,7 +2,28 @@
     --color-white: #ffffff;
     --color-black: #000000;
     --color-gray-1: #F8F8F9;
+    --color-gray-2: #726e7e;
+    --color-gray-3: #464157;
+    --color-gray-4: #dcdbe1;
+    --color-blue-1: #3498db;
+    --color-blue-2: #2980b9;
+
+    /* Body */
     --body-background-color: var(--color-gray-1);
+
+    /* Header */
     --header-background-color: var(--color-white);
-    --header-link-color: var(--color-black);
+    --header-link-color: var(--color-gray-2);
+    --header-link-active-color: var(--color-black);
+
+    /* Botão */
+    --button-primary-background-color: var(--color-blue-1);
+    --button-primary-background-color-hover: var(--color-blue-2);
+    --button-primary-color: var(--color-white);
+
+    /* Home */
+    --home-background-color: var(--color-white);
+    --home-border-color: var(--color-gray-4);
+    --home-call-to-action-title-color: var(--color-black);
+    --home-call-to-action-subtitle-color: var(--color-gray-3);
 }

@@ -5,4 +5,13 @@
 
     /* Global margins and paddings */
     --global-padding: 20px;
+
+    /* Header sizes */
+    --header-title-size: 1.3rem;
+    --header-menu-link-size: 0.9rem;
+
+    /* Home sizes */
+    --home-call-to-action-title-size: 2.3rem;
+    --home-call-to-action-subtitle-size: 1rem;
+
 }
