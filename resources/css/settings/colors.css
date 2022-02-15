@@ -16,10 +16,28 @@
     --header-link-color: var(--color-gray-2);
     --header-link-active-color: var(--color-black);
 
-    /* Botão */
+    /* Input */
+    --input-border-color: var(--color-black);
+
+    /* Button */
     --button-primary-background-color: var(--color-blue-1);
     --button-primary-background-color-hover: var(--color-blue-2);
     --button-primary-color: var(--color-white);
+
+    --button-outline-background-color: var(--color-white);
+    --button-outline-background-color-hover: var(--color-blue-2);
+    --button-outline-color: var(--color-blue-1);
+    --button-outline-color-hover: var(--color-white);
+    --button-outline-border-color: var(--color-blue-1);
+    --button-outline-border-color-hover: var(--color-blue-2);
+
+    /* Card */
+    --card-background-color: var(--color-white);
+
+    /* Pagination */
+    --pagination-link-border-color: var(--color-gray-4);
+    --pagination-link-color: var(--color-blue-2);
+    --pagination-link-color-disabled: var(--color-gray-2);
 
     /* Home */
     --home-background-color: var(--color-white);
@@ -28,7 +46,12 @@
     --home-call-to-action-subtitle-color: var(--color-gray-3);
     --home-how-it-works-background-color: var(--color-blue-1);
     --home-how-it-works-title-color: var(--color-white);
-    --home-how-it-works-card-background-color: var(--color-white);
     --home-how-it-works-card-topic-color: var(--color-black);
     --home-how-it-works-card-description-color: var(--color-gray-3);
+
+    /* Jobs */
+    --jobs-background-color: var(--color-white);
+    --jobs-jobs-container-title-color: var(--color-black);
+    --jobs-jobs-container-subtitle-color: var(--color-black);
+    --jobs-jobs-container-description-color: var(--color-gray-3);
 }

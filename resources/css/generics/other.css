@@ -1,7 +1,10 @@
+html {
+    font-size: 18px;
+    font-family: 'Roboto', Tahoma, Verdana, sans-serif;
+}
+
 body {
     background-color: var(--body-background-color);
-    font-size: 18px;
-    font-family: Tahoma, Verdana, sans-serif;
 }
 
 ul {

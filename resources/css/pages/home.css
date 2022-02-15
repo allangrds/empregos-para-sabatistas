@@ -21,6 +21,7 @@
 }
 
 .home .call-to-action .button {
+    font-size: var(--home-call-to-action-button-size);
     margin-top: 40px;
     margin-bottom: 30px;
 }
@@ -48,13 +49,6 @@
     .home .how-it-works .card-container {
         grid-template-columns: 1fr;
     }
-}
-
-.home .how-it-works .card {
-    background-color: var(--home-how-it-works-card-background-color);
-    border-radius: var(--global-border-radius);
-    padding: 20px;
-    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%);
 }
 
 .home .how-it-works .topic {

@@ -6,7 +6,7 @@
             <div class="container">
                 <section class="call-to-action">
                     <h2 class="title">
-                        <strong>Vagas</strong> certeiras pra quem <strong>guarda o sábado</strong>
+                        As <strong>vagas</strong> certas pra quem <strong>guarda o sábado</strong>
                     </h2>
                     <p class="subtitle">
                         Está procurando um emprego no sábado? Está contratando e essa vaga respeita o sábado? Aqui é o lugar!

@@ -7,8 +7,12 @@ Route::get('/', function () {
 })->name('user.home');
 
 Route::get('/vagas', function () {
-    return view('home');
+    return view('jobs');
 })->name('user.jobs');
+
+Route::get('/vagas/{id}', function () {
+    return view('jobs');
+})->name('user.jobs_detail');
 
 Route::get('/publique-uma-vaga', function () {
     return view('home');
