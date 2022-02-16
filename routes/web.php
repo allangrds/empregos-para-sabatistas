@@ -1,19 +1,30 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\JobController;
 
 Route::get('/', function () {
     return view('home');
 })->name('user.home');
 
-Route::get('/vagas', function () {
-    return view('jobs');
-})->name('user.jobs');
+Route::get('/vagas', [
+    JobController::class,
+    'index'
+])->name('user.jobs');
 
 Route::get('/vagas/{id}', function () {
     return view('jobs');
 })->name('user.jobs_detail');
 
-Route::get('/publique-uma-vaga', function () {
-    return view('home');
-})->name('user.publish-jobs');
+Route::get('/publique-uma-vaga', [
+    JobController::class,
+    'create'
+])->name('user.publish_jobs');
+
+Route::middleware(['throttle:8,1'])->group(function () {
+    Route::post('/publique-uma-vaga', [
+        JobController::class,
+        'store'
+    ])->name('user.publish_jobs_post');
+});
+

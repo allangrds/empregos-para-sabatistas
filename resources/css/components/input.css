@@ -18,3 +18,15 @@
     min-height: 40px;
     padding: 4px;
 }
+
+.fieldset .textarea {
+    resize: none;
+    height: 100px;
+}
+
+.fieldset .error_message {
+    color: var(--input-error-color);
+    font-size: var(--input-error-size);
+    height: var(--input-error-size);
+    margin-top: 5px;
+}

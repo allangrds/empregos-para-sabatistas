@@ -22,5 +22,7 @@
         </main>
 
         @include('layouts.footer')
+
+        <script src="/js/app.js"></script>
     </body>
 </html>

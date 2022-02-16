@@ -15,6 +15,7 @@
 
     /* Input sizes */
     --input-label-size: 1rem;
+    --input-error-size: 0.9rem;
 
     /* Pagination sizes */
     --pagination-item-link-first-border-top-left-radius: var(--global-border-radius);
@@ -37,4 +38,7 @@
 
     /* Footer sizes */
     --footer-text-size: 1rem;
+
+    /* Alert */
+    --alert-text-size: 1rem;
 }

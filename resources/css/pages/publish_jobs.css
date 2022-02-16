@@ -1,0 +1,41 @@
+.publish_jobs {
+    padding-bottom: 16px;
+}
+
+.publish_jobs .title {
+    color: #000;
+    font-size: 2rem;
+}
+
+.publish_jobs .subtitle {
+    font-size: 1.3rem;
+    color: var(--color-gray-2);
+    font-weight: 500;
+}
+
+.publish_jobs .form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.publish_jobs .fieldset-container {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.publish_jobs .button {
+    font-size: 1.2rem;
+}
+
+.publish_jobs .alert {
+    margin-bottom: 14px;
+}
+
+@media (max-width: 730px) {
+    .publish_jobs .fieldset-container {
+        grid-template-columns: 1fr;
+    }
+}

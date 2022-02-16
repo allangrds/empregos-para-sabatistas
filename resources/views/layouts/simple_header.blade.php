@@ -31,8 +31,8 @@
                         </li>
                         <li>
                             <a
-                                class="link {{ (Route::currentRouteName() === 'user.publish-jobs') ? 'active' : ''}}"
-                                href="{{ route('user.publish-jobs') }}"
+                                class="link {{ (Route::currentRouteName() === 'user.publish_jobs') ? 'active' : ''}}"
+                                href="{{ route('user.publish_jobs') }}"
                             >
                                 publique uma vaga
                             </a>

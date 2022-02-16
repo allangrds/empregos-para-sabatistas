@@ -7,6 +7,8 @@
     --color-gray-4: #dcdbe1;
     --color-blue-1: #3498db;
     --color-blue-2: #2980b9;
+    --color-red-1: #e74c3c;
+    --color-green-1: #2ecc71;
 
     /* Body */
     --body-background-color: var(--color-gray-1);
@@ -18,8 +20,13 @@
 
     /* Input */
     --input-border-color: var(--color-black);
+    --input-error-color: var(--color-red-1);
 
     /* Button */
+    --button-disabled-background-color: var(--color-gray-4);
+    --button-disabled-color: var(--color-gray-3);
+
+
     --button-primary-background-color: var(--color-blue-1);
     --button-primary-background-color-hover: var(--color-blue-2);
     --button-primary-color: var(--color-white);
@@ -33,6 +40,12 @@
 
     /* Card */
     --card-background-color: var(--color-white);
+
+    /* Alert */
+    --alert-success-background-color: var(--color-green-1);
+    --alert-success-color: var(--color-white);
+    --alert-error-background-color: var(--color-red-1);
+    --alert-error-color: var(--color-white);
 
     /* Pagination */
     --pagination-link-border-color: var(--color-gray-4);

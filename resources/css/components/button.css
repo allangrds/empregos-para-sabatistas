@@ -11,6 +11,13 @@
     text-align: center;
 }
 
+.button.primary:disabled,
+.button.primary:hover:disabled {
+    background-color: var(--button-disabled-background-color);
+    color: var(--button-disabled-color);
+    cursor: not-allowed;
+}
+
 .button.primary {
     background-color: var(--button-primary-background-color);
     color: var(--button-primary-color);
