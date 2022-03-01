@@ -942,11 +942,14 @@ function createInteractions(elements) {
     typingTimer = setTimeout(getAddressByZipcode(event), doneTypingInterval);
   });
   zipcode.addEventListener('keyup', function () {
+    console.log('keyup');
     clearTimeout(typingTimer);
     typingTimer = setTimeout(getAddressByZipcode(event), doneTypingInterval);
   });
-  zipcode.addEventListener('keydown', function () {
+  zipcode.addEventListener('onfocusout', function () {
+    console.log('onfocusout');
     clearTimeout(typingTimer);
+    typingTimer = setTimeout(getAddressByZipcode(event), doneTypingInterval);
   });
 }
 

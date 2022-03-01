@@ -37,6 +37,13 @@
 }
 
 .jobs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
+}
+
+.jobs-container {
     min-height: 320px;
 }
 

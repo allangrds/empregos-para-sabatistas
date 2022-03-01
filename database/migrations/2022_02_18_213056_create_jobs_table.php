@@ -29,12 +29,20 @@ class CreateJobsTable extends Migration
             $table->integer('final_salary')->nullable($value = true);
             $table->longText('how_to_apply');
             $table->string('zipcode');
-            $table->string('city');
-            $table->string('state');
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')
                 ->references('id')
                 ->on('categories')
+                ->onDelete('cascade');
+            $table->unsignedBigInteger('state_id');
+            $table->foreign('state_id')
+                ->references('id')
+                ->on('states')
+                ->onDelete('cascade');
+            $table->unsignedBigInteger('city_id');
+            $table->foreign('city_id')
+                ->references('id')
+                ->on('cities')
                 ->onDelete('cascade');
             $table->timestamps();
         });

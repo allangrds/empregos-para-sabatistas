@@ -1,6 +1,7 @@
-.pagination {
+.pagination > ul {
     display: flex;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 .item:first-child .link {
@@ -14,6 +15,7 @@
 }
 
 .pagination .link {
+    display: block;
     padding: 0.7rem 1rem;
     border: 1px solid var(--pagination-link-border-color);
     color: var(--pagination-link-color);
@@ -30,4 +32,15 @@
 
 .pagination .link:hover {
     background-color: #eee;
+}
+
+.pagination .count {
+    font-size: var(--pagination-count-font-size);
+    margin-top: 18px;
+}
+
+@media (max-width: 730px) {
+    .pagination > ul {
+
+    }
 }

@@ -59,14 +59,16 @@ function createInteractions (elements) {
     });
 
     zipcode.addEventListener('keyup', () => {
+        console.log('keyup')
         clearTimeout(typingTimer);
         typingTimer = setTimeout(getAddressByZipcode(event), doneTypingInterval);
     });
 
-    zipcode.addEventListener('keydown', () => {
+    zipcode.addEventListener('onfocusout', () => {
+        console.log('onfocusout')
         clearTimeout(typingTimer);
-    })
-
+        typingTimer = setTimeout(getAddressByZipcode(event), doneTypingInterval);
+    });
 }
 
 export default function init() {

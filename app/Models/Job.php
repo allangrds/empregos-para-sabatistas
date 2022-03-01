@@ -28,8 +28,8 @@ class Job extends Model
         'final_salary',
         'how_to_apply',
         'zipcode',
-        'city',
-        'state',
+        'city_id',
+        'state_id',
         'category_id',
     ];
 
@@ -39,4 +39,31 @@ class Job extends Model
      * @var string
      */
     protected $table = 'jobs';
+
+    /**
+     * Get the job's company name.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public function getCompanyNameAttribute($value)
+    {
+        return ucfirst($value);
+    }
+
+    /**
+     * Get the state from the city
+     */
+    public function state()
+    {
+        return $this->belongsTo('App\Models\State');
+    }
+
+    /**
+     * Get the city from the city
+     */
+    public function city()
+    {
+        return $this->belongsTo('App\Models\City');
+    }
 }

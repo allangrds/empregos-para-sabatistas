@@ -5,16 +5,19 @@
         <aside class="filters">
             <div class="wrapper">
                 <div class="container">
-                    <form class="form" action="">
+                    <form class="form" action="{{ route('user.jobs') }}" method="get">
+                        @csrf
                         <fieldset class="fieldset">
                             <label class="label" for="job_name">
                                 Nome da vaga
                             </label>
                             <input
                                 id="job_name"
+                                name="job_name"
                                 class="input"
                                 type="text"
                                 placeholder="Digite o nome da vaga"
+                                value="{{ request('job_name') }}"
                             />
                         </fieldset>
                         <fieldset class="fieldset">
@@ -23,14 +26,19 @@
                             </label>
                             <select
                                 class="input"
-                                name="categories"
-                                id="categories"
+                                name="category_id"
+                                id="category"
+                                name="category"
                             >
-                                <option value="" selected disabled>
-                                    Escolha uma categoria
-                                </option>
-                                <option value="">Todas</option>
-                                <option value="V">V</option>
+                                <option value="" {{ request('category_id') === "" ? "selected" : "" }}>Todas</option>
+                                @foreach ($categories as $category)
+                                    <option
+                                        value={{ $category['id'] }}
+                                        {{ request('category_id') == $category['id'] ? "selected" : "" }}
+                                    >
+                                        {{ $category['text'] }}
+                                    </option>
+                                @endforeach
                             </select>
                         </fieldset>
                         <fieldset class="fieldset">
@@ -39,31 +47,33 @@
                             </label>
                             <select
                                 class="input"
-                                name="state"
+                                name="state_id"
                                 id="state"
+                                name="state"
                             >
-                                <option value="" selected disabled>
-                                    Escolha um estado
-                                </option>
-                                <option value="">Todas</option>
-                                <option value="V">V</option>
+                                <option value="" {{ request('state_id') === "" ? "selected" : "" }}>Todos</option>
+                                @foreach ($states as $state)
+                                    <option
+                                        value={{ $state['id'] }}
+                                        {{ request('state_id') == $state['id'] ? "selected" : "" }}
+                                    >
+                                        {{ $state['name'] }}
+                                    </option>
+                                @endforeach
                             </select>
                         </fieldset>
                         <fieldset class="fieldset">
                             <label class="label" for="city">
                                 Cidade
                             </label>
-                            <select
-                                class="input"
-                                name="city"
+                            <input
                                 id="city"
-                            >
-                                <option value="" selected disabled>
-                                    Escolha um cidade
-                                </option>
-                                <option value="">Todas</option>
-                                <option value="V">V</option>
-                            </select>
+                                name="city"
+                                class="input"
+                                type="text"
+                                placeholder="Digite o nome da cidade"
+                                value="{{ request('city') }}"
+                            />
                         </fieldset>
                         <fieldset class="fieldset">
                             <label class="label" for="contract_type">
@@ -74,18 +84,23 @@
                                 name="contract_type"
                                 id="contract_type"
                             >
-                                <option value="" selected disabled>
-                                    Escolha o tipo de contratação
+                                <option value="" {{ request('contract_type') === "" ? "selected" : "" }}>
+                                   Todas
                                 </option>
-                                <option value="">Todas</option>
-                                <option value="V">V</option>
+                                @foreach ($contractTypes as $contractType)
+                                    <option
+                                        value={{ $contractType['name'] }}
+                                        {{ request('contract_type') === $contractType['name'] ? "selected" : "" }}
+                                    >
+                                        {{ $contractType['text'] }}
+                                    </option>
+                                @endforeach
                             </select>
                         </fieldset>
                         <button class="button primary">
                             Buscar
                         </button>
                     </form>
-
                 </div>
             </div>
         </aside>
@@ -93,131 +108,48 @@
             <div class="wrapper">
                 <div class="container">
                     <div class="card-container">
-                        <div class="card jobs-container">
-                            <p class="title">
-                                Auxiliar administrativo
-                            </p>
-                            <p class="subtitle">
-                                Cobasi Pet shop, Caraguatatuba, São Paulo
-                            </p>
-                            <p class="subtitle">
-                                CLT, Salário a combinar
-                            </p>
-                            <p class="description">
-                                Auxilia diversas áreas de uma organização nas rotinas de digitação, arquivo de documentos, distribuição de correspondência e serviços externos. Elabora relatórios e planilhas de controle.
-                            </p>
-                            <a href="#" class="button outline">
-                                ver detalhes da vaga
-                            </a>
-                        </div>
-                        <div class="card jobs-container">
-                            <p class="title">
-                                Auxiliar administrativo
-                            </p>
-                            <p class="subtitle">
-                                Cobasi Pet shop, Caraguatatuba, São Paulo
-                            </p>
-                            <p class="subtitle">
-                                CLT, Salário a combinar
-                            </p>
-                            <p class="description">
-                                Auxilia diversas áreas de uma organização nas rotinas de digitação, arquivo de documentos, distribuição de correspondência e serviços externos. Elabora relatórios e planilhas de controle.
-                            </p>
-                            <a href="#" class="button outline">
-                                ver detalhes da vaga
-                            </a>
-                        </div>
-                        <div class="card jobs-container">
-                            <p class="title">
-                                Auxiliar administrativo
-                            </p>
-                            <p class="subtitle">
-                                Cobasi Pet shop, Caraguatatuba, São Paulo
-                            </p>
-                            <p class="subtitle">
-                                CLT, Salário a combinar
-                            </p>
-                            <p class="description">
-                                Auxilia diversas áreas de uma organização nas rotinas de digitação, arquivo de documentos, distribuição de correspondência e serviços externos. Elabora relatórios e planilhas de controle.
-                            </p>
-                            <a href="#" class="button outline">
-                                ver detalhes da vaga
-                            </a>
-                        </div>
-                        <div class="card jobs-container">
-                            <p class="title">
-                                Auxiliar administrativo
-                            </p>
-                            <p class="subtitle">
-                                Cobasi Pet shop, Caraguatatuba, São Paulo
-                            </p>
-                            <p class="subtitle">
-                                CLT, Salário a combinar
-                            </p>
-                            <p class="description">
-                                Auxilia diversas áreas de uma organização nas rotinas de digitação, arquivo de documentos, distribuição de correspondência e serviços externos. Elabora relatórios e planilhas de controle.
-                            </p>
-                            <a href="#" class="button outline">
-                                ver detalhes da vaga
-                            </a>
-                        </div>
-                        <div class="card jobs-container">
-                            <p class="title">
-                                Auxiliar administrativo
-                            </p>
-                            <p class="subtitle">
-                                Cobasi Pet shop, Caraguatatuba, São Paulo
-                            </p>
-                            <p class="subtitle">
-                                CLT, Salário a combinar
-                            </p>
-                            <p class="description">
-                                Auxilia diversas áreas de uma organização nas rotinas de digitação, arquivo de documentos, distribuição de correspondência e serviços externos. Elabora relatórios e planilhas de controle.
-                            </p>
-                            <a href="#" class="button outline">
-                                ver detalhes da vaga
-                            </a>
-                        </div>
-                        <div class="card jobs-container">
-                            <p class="title">
-                                Auxiliar administrativo
-                            </p>
-                            <p class="subtitle">
-                                Cobasi Pet shop, Caraguatatuba, São Paulo
-                            </p>
-                            <p class="subtitle">
-                                CLT, Salário a combinar
-                            </p>
-                            <p class="description">
-                                Auxilia diversas áreas de uma organização nas rotinas de digitação, arquivo de documentos, distribuição de correspondência e serviços externos. Elabora relatórios e planilhas de controle.
-                            </p>
-                            <a href="#" class="button outline">
-                                ver detalhes da vaga
-                            </a>
-                        </div>
+                        @foreach ($jobs as $job)
+                            <div class="card jobs-container">
+                                <div>
+                                    <p class="title">
+                                        {{ $job->job_name }}
+                                    </p>
+                                    <p class="subtitle">
+                                        {{ $job->company_name }}, {{ $job->city->name }}, {{ $job->state->name }}
+                                    </p>
+                                    <p class="subtitle">
+                                        @if($job->contract_type == 'clt_full')
+                                            CLT de tempo integral
+                                        @elseif($job->contract_type == 'clt_part')
+                                            CLT de tempo parcial
+                                        @else
+                                            PJ
+                                        @endif,
+                                        @if($job->salary)
+                                            R$ {{ number_format($job->salary, 2) }}
+                                        @else
+                                            R$ {{ number_format($job->initial_salary, 2) }} até R$ {{ number_format($job->final_salary, 2) }}
+                                        @endif
+                                    </p>
+                                    <p class="description">
+                                        {{ $job->description }}
+                                    </p>
+                                </div>
+                                <a href="#" class="button outline">
+                                    ver detalhes da vaga
+                                </a>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
+            {{ $jobs->appends([
+                'job_name' => request('job_name'),
+                'category_id' => request('category_id'),
+                'state_id' => request('state_id'),
+                'city' => request('city'),
+                'contract_type' => request('contract_type'),
+            ])->links() }}
         </section>
-        <div class="wrapper">
-            <div class="container">
-                <nav>
-                    <ul class="pagination">
-                        <li class="item">
-                            <a class="link disabled" href="#">Anterior</a>
-                        </li>
-                        <li class="item">
-                            <a class="link" href="#">1</a>
-                        </li>
-                        <li class="item">
-                            <a class="link" href="#">2</a>
-                        </li>
-                        <li class="item">
-                            <a class="link" href="#">Próximo</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
     </div>
 @endsection
