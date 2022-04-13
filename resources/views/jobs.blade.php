@@ -131,11 +131,8 @@
                                             R$ {{ number_format($job->initial_salary, 2) }} até R$ {{ number_format($job->final_salary, 2) }}
                                         @endif
                                     </p>
-                                    <p class="description">
-                                        {{ $job->description }}
-                                    </p>
                                 </div>
-                                <a href="#" class="button outline">
+                                <a href="{{ route('user.jobs_detail', $job->slug) }}" class="button outline">
                                     ver detalhes da vaga
                                 </a>
                             </div>

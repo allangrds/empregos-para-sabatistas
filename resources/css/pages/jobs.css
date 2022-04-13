@@ -44,7 +44,7 @@
 }
 
 .jobs-container {
-    min-height: 320px;
+    min-height: 200px;
 }
 
 .jobs-container .title {
@@ -56,12 +56,6 @@
 .jobs-container .subtitle {
     font-size: var(--jobs-jobs-container-subtitle-size);
     color: var(--jobs-jobs-container-subtitle-color);
-}
-
-.jobs-container .description {
-    font-size: var(--jobs-jobs-container-description-size);
-    color: var(--jobs-jobs-container-description-color);
-    margin-top: 20px;
 }
 
 .jobs-container .button {

@@ -14,9 +14,12 @@ Route::middleware(['throttle:11,1'])->group(function () {
     ])->name('user.jobs');
 });
 
-Route::get('/vagas/{id}', function () {
-    return view('jobs');
-})->name('user.jobs_detail');
+Route::middleware(['throttle:5,1'])->group(function () {
+    Route::get('/vagas/{slug}', [
+        JobController::class,
+        'show'
+    ])->name('user.jobs_detail');
+});
 
 Route::get('/publique-uma-vaga', [
     JobController::class,

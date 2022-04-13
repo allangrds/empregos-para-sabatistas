@@ -18,7 +18,7 @@ class CreateJobsTable extends Migration
             $table->boolean('active')->default(false);
             $table->string('slug');
             $table->string('job_name');
-            $table->string('description')->nullable($value = true);
+            $table->longText('description')->nullable($value = true);
             $table->string('company_name');
             $table->enum('contract_type', ['clt_full', 'clt_part', 'pj']);
             $table->longText('requirements');
