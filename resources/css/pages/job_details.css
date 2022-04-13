@@ -1,0 +1,39 @@
+.job_details {
+    padding-bottom: 16px;
+}
+
+.job_details .title {
+    color: #000;
+    font-size: 2rem;
+}
+
+.job_details .subtitle {
+    font-size: 1.3rem;
+    color: var(--color-gray-2);
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.job_details .item_title {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--color-black);
+    font-weight: 500;
+}
+
+.job_details .item_description {
+    font-size: 1rem;
+    color: var(--color-black);
+    white-space: pre-line;
+}
+
+.one_group_grid {
+    margin-bottom: 14px;
+}
+
+.three_group_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 14px;
+}

@@ -183,8 +183,26 @@ class JobController extends Controller
      * @param  \App\Models\Jobs  $jobs
      * @return \Illuminate\Http\Response
      */
-    public function show(Jobs $jobs)
+    public function show(Request $request, $slug)
     {
-        //
+        $job = Job::where('active', true)
+            ->where('slug', $slug)
+            ->first();
+
+        if (!$job) {
+            return abort(404);
+        }
+
+        $state = State::where('id', $job['state_id'])
+            ->first();
+
+        $city = City::where('state_id', $job['state_id'])
+            ->first();
+
+        return view('jobs_details', [
+            'job' => $job,
+            'state' => $state,
+            'city' => $city,
+        ]);
     }
 }
