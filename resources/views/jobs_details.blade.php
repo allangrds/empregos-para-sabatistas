@@ -34,8 +34,10 @@
                             <span class="item_title">Salário</span>
                             <p class="item_description">@if($job->salary)
                                 R$ {{ number_format($job->salary, 2) }}
-                                @else
+                                @elseif($job->initial_salary)
                                     R$ {{ number_format($job->initial_salary, 2) }} até R$ {{ number_format($job->final_salary, 2) }}
+                                @else
+                                    Salário a combinar
                                 @endif
                             </p>
                         </div>

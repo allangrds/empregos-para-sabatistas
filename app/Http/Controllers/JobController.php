@@ -130,19 +130,6 @@ class JobController extends Controller
             return Redirect::back()->withErrors($messages)->withInput();
         }
 
-        /* When there isn't information about initial_salary or final_salary */
-        if (
-            (!$formValues['initial_salary'] || !$formValues['final_salary']) &&
-            !$formValues['salary']
-        ) {
-            $messages = [
-                'initial_salary' => 'Esse campo é obrigatório',
-                'final_salary' => 'Esse campo é obrigatório',
-            ];
-
-            return back()->withErrors($messages)->withInput();
-        }
-
         try {
             $choosedState = State::where('uf', $formValues['state'])->get()->first();
 
