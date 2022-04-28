@@ -117,19 +117,6 @@ class JobController extends Controller
     {
         $formValues = $request->all();
 
-        /* When there isn't any information about salary */
-        if (
-            !$formValues['salary'] &&
-            !$formValues['initial_salary'] &&
-            !$formValues['final_salary']
-        ) {
-            $messages = [
-                'salary' => 'Esse campo é obrigatório',
-            ];
-
-            return Redirect::back()->withErrors($messages)->withInput();
-        }
-
         try {
             $choosedState = State::where('uf', $formValues['state'])->get()->first();
 
