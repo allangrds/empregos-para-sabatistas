@@ -39,6 +39,7 @@ class StoreJobRequest extends FormRequest
             'city' => 'required|max:50',
             'state' => 'required|max:30',
             'category_id' => 'required',
+            'g-recaptcha-response' => 'recaptcha',
         ];
     }
 }

@@ -1,5 +1,9 @@
 @extends('layouts.simple')
 
+@section('head')
+    {!! htmlScriptTagJsApi() !!}
+@endsection
+
 @section('content')
     <div class="publish_jobs">
         <div class="wrapper">
@@ -24,6 +28,7 @@
                     </h2>
                     <form class="form" method="POST" action="{{ route('user.publish_jobs_post') }}">
                         @csrf
+
                         <div class="fieldset-container">
                             <fieldset class="fieldset">
                                 <label class="label" for="job_name">
@@ -290,6 +295,9 @@
                         </div>
                         <input type="hidden" name="city" id="city" value={{ old('city') }} />
                         <input type="hidden" name="state" id="state" value={{ old('state') }} />
+
+                        {!! htmlFormSnippet() !!}
+
                         <button class="button primary" id="form_button">
                             Enviar
                         </button>
