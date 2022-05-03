@@ -33,7 +33,18 @@
 
 .three_group_grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin-bottom: 14px;
+}
+
+@media (max-width: 1279px) {
+    .three_group_grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 1280px) {
+    .three_group_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
