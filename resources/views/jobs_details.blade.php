@@ -22,7 +22,7 @@
                         </div>
                         <div>
                             <span class="item_title">Desejáveis</span>
-                            <p class="item_description">{{ $job['diferential'] }}</p>
+                            <p class="item_description">{{ $job['differential'] }}</p>
                         </div>
                         <div>
                             <span class="item_title">Benefícios</span>
