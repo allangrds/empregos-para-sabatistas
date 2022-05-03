@@ -14,6 +14,16 @@
 
         <link href="/css/app.css" rel="stylesheet" />
 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-96YJKJ2K5T"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-96YJKJ2K5T');
+        </script>
+
         @yield('head')
     </head>
     <body>
