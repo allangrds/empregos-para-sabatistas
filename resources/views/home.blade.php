@@ -9,7 +9,7 @@
                         As <strong>vagas</strong> certas pra quem <strong>guarda o sábado</strong>
                     </h2>
                     <p class="subtitle">
-                        Está procurando um emprego no sábado? Está contratando e essa vaga respeita o sábado? Aqui é o lugar!
+                        Seja pra você que guarda o sábado ou pra você que tem uma empresa e respeita esse dia
                     </p>
                     <a class="button primary" href="{{ route('user.jobs') }}">
                         ver vagas
