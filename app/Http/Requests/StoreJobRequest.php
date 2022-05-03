@@ -25,12 +25,12 @@ class StoreJobRequest extends FormRequest
     {
         return [
             'job_name' => 'required|max:255',
-            'description' => 'nullable|max:255',
+            'description' => 'nullable|max:1200',
             'company_name' => 'required|max:255',
             'contract_type' => 'required|max:255',
-            'requirements' => 'required|max:850',
-            'differential' => 'nullable|max:850',
-            'benefits' => 'required|max:850',
+            'requirements' => 'required|max:1200',
+            'differential' => 'nullable|max:1200',
+            'benefits' => 'required|max:1200',
             'salary' => 'nullable|numeric|max:50000',
             'initial_salary' => 'nullable|numeric|max:50000',
             'final_salary' => 'nullable|numeric|max:50000',
