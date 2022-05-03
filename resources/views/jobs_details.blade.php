@@ -15,7 +15,7 @@
                         <span class="item_title">Descrição da vaga</span>
                         <p class="item_description">{{ $job['description'] }}</p>
                     </div>
-                    <div class="three_group_grid">
+                    <div class="two_group_grid">
                         <div>
                             <span class="item_title">Requisitos</span>
                             <p class="item_description">{{ $job['requirements'] }}</p>
@@ -28,8 +28,6 @@
                             <span class="item_title">Benefícios</span>
                             <p class="item_description">{{ $job['benefits'] }}</p>
                         </div>
-                    </div>
-                    <div class="three_group_grid">
                         <div>
                             <span class="item_title">Salário</span>
                             <p class="item_description">@if($job->salary)
