@@ -7,14 +7,14 @@ Route::get('/', function () {
     return view('home');
 })->name('user.home');
 
-Route::middleware(['throttle:11,1'])->group(function () {
+Route::middleware(['throttle:15,1'])->group(function () {
     Route::get('/vagas', [
         JobController::class,
         'index'
     ])->name('user.jobs');
 });
 
-Route::middleware(['throttle:5,1'])->group(function () {
+Route::middleware(['throttle:7,1'])->group(function () {
     Route::get('/vagas/{slug}', [
         JobController::class,
         'show'
