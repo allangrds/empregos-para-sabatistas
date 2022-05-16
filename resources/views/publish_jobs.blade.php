@@ -289,7 +289,11 @@
                                     class="input"
                                     type="text"
                                     disabled
-                                    value={{ old('city_state') }}
+                                    @if(old('city_state'))
+                                        value="{{ old('city_state') }}"
+                                    @else
+                                        value="{{ old('city').', '.old('state') }}"
+                                    @endif
                                 />
                             </fieldset>
                         </div>
