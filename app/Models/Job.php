@@ -31,6 +31,9 @@ class Job extends Model
         'city_id',
         'state_id',
         'category_id',
+        'allocation',
+        'responsabilities',
+        'working_time',
     ];
 
     /**

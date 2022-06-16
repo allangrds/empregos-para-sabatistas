@@ -97,6 +97,28 @@
                                 @endforeach
                             </select>
                         </fieldset>
+                        <fieldset class="fieldset">
+                            <label class="label" for="allocation">
+                                Alocação
+                            </label>
+                            <select
+                                class="input"
+                                name="allocation"
+                                id="allocation"
+                            >
+                                <option value="" {{ request('allocation') === "" ? "selected" : "" }}>
+                                   Todas
+                                </option>
+                                @foreach ($allocations as $allocation)
+                                    <option
+                                        value={{ $allocation['name'] }}
+                                        {{ request('allocation') === $allocation['name'] ? "selected" : "" }}
+                                    >
+                                        {{ $allocation['text'] }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </fieldset>
                         <button class="button primary">
                             Buscar
                         </button>
@@ -124,6 +146,13 @@
                                             CLT de tempo parcial
                                         @else
                                             PJ
+                                        @endif,
+                                        @if($job->allocation == 'presential')
+                                            Presencial
+                                        @elseif($job->allocation == 'hybrid')
+                                            Híbrido
+                                        @else
+                                            Remoto(100% em casa)
                                         @endif,
                                         @if($job->salary)
                                             R$ {{ number_format($job->salary, 2) }}
