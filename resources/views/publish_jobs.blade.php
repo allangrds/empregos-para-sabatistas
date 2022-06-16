@@ -138,6 +138,69 @@
                                 </p>
                             </fieldset>
                         </div>
+                        <div class="fieldset-container">
+                            <fieldset class="fieldset">
+                                <label class="label" for="allocation">
+                                    Alocação
+                                </label>
+                                <select
+                                    class="input"
+                                    name="allocation"
+                                    id="allocation"
+                                >
+                                    <option value="" {{ old('allocation') === "" ? "selected" : "" }}>
+                                        Escolha uma das opções
+                                    </option>
+                                    @foreach ($allocations as $allocation)
+                                        <option
+                                            value={{ $allocation['name'] }}
+                                            {{ old('allocation') === $allocation['name'] ? "selected" : "" }}
+                                        >
+                                            {{ $allocation['text'] }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                                <p class="error_message">
+                                    @if($errors->has('allocation'))
+                                        {{ $errors->first('allocation') }}
+                                    @endif
+                                </p>
+                            </fieldset>
+                            <fieldset class="fieldset">
+                                <label class="label" for="working_time">
+                                    Período de trabalho
+                                </label>
+                                <input
+                                    id="working_time"
+                                    name="working_time"
+                                    class="input"
+                                    type="text"
+                                    placeholder="Ex: Seg/Sexta 8:00 às 18:00"
+                                    value="{{ old('working_time') }}"
+                                />
+                                <p class="error_message">
+                                    @if($errors->has('working_time'))
+                                        {{ $errors->first('working_time') }}
+                                    @endif
+                                </p>
+                            </fieldset>
+                        </div>
+                        <fieldset class="fieldset">
+                            <label class="label" for="responsabilities">
+                                Responsabilidades
+                            </label>
+                            <textarea
+                                class="input textarea"
+                                name="responsabilities"
+                                id="responsabilities"
+                                placeholder="Digite as responsabilidades"
+                            >{{ old('responsabilities') }}</textarea>
+                            <p class="error_message">
+                                @if($errors->has('responsabilities'))
+                                    {{ $errors->first('responsabilities') }}
+                                @endif
+                            </p>
+                        </fieldset>
                         <fieldset class="fieldset">
                             <label class="label" for="requirements">
                                 Requisitos

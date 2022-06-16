@@ -40,6 +40,9 @@ class StoreJobRequest extends FormRequest
             'state' => 'required|max:30',
             'category_id' => 'required',
             'g-recaptcha-response' => 'recaptcha',
+            'allocation' => 'required|max:255',
+            'responsabilities' => 'max:1200',
+            'working_time' => 'max:255',
         ];
     }
 }

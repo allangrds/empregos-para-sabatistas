@@ -100,10 +100,25 @@ class JobController extends Controller
                 'name' => 'pj'
             ),
         );
+        $allocations = array(
+            array(
+                'text' => 'Presencial',
+                'name' => 'presential'
+            ),
+            array(
+                'text' => 'Híbrido',
+                'name' => 'hybrid'
+            ),
+            array(
+                'text' => 'Remoto(100% em casa)',
+                'name' => 'remote'
+            ),
+        );
 
         return view('publish_jobs', [
             'categories' => $categories->toArray(),
             'contractTypes' => $contractTypes,
+            'allocations' => $allocations,
         ]);
     }
 

@@ -62,6 +62,10 @@ class CategorySeeder extends Seeder
             array(
                 'name' => 'engineering',
                 'text' => 'Ciência e engenharia',
+            ),
+            array(
+                'name' => 'health',
+                'text' => 'Saúde',
             )
         );
 
