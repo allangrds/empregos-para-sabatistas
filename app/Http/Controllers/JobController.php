@@ -25,6 +25,7 @@ class JobController extends Controller
         $jobName = $formValues && Arr::exists($formValues, 'job_name') ? $formValues['job_name'] : "";
         $category = $formValues && Arr::exists($formValues, 'category_id') ? $formValues['category_id'] : "";
         $contractType = $formValues && Arr::exists($formValues, 'contract_type') ? $formValues['contract_type'] : "";
+        $allocation = $formValues && Arr::exists($formValues, 'allocation') ? $formValues['allocation'] : "";
         $stateId = $formValues && Arr::exists($formValues, 'state_id') ? $formValues['state_id'] : "";
         $city = $formValues && Arr::exists($formValues, 'city') ? $formValues['city'] : "";
         $city_id = "";
@@ -49,6 +50,7 @@ class JobController extends Controller
             ->where('job_name', 'like', '%' . $jobName . '%')
             ->where('category_id', 'like', '%' . $category . '%')
             ->where('contract_type', 'like', '%' . $contractType . '%')
+            ->where('allocation', 'like', '%' . $allocation . '%')
             ->where('state_id', 'like', '%' . $stateId)
             ->where('city_id', 'like', '%' . $city_id)
             ->orderBy('created_at', 'desc')
@@ -69,10 +71,25 @@ class JobController extends Controller
                 'name' => 'pj'
             ),
         );
+        $allocations = array(
+            array(
+                'text' => 'Presencial',
+                'name' => 'presential'
+            ),
+            array(
+                'text' => 'Híbrido',
+                'name' => 'hybrid'
+            ),
+            array(
+                'text' => 'Remoto(100% em casa)',
+                'name' => 'remote'
+            ),
+        );
 
         return view('jobs', [
             'jobs' => $jobs,
             'contractTypes' => $contractTypes,
+            'allocations' => $allocations,
             'categories' => $categories->toArray(),
             'states' => $states->toArray(),
         ]);
