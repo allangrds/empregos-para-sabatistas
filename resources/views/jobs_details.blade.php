@@ -64,8 +64,8 @@
                                     Presencial
                                 @elseif($job->allocation == 'hybrid')
                                     Híbrido
-                                @else
-                                    Remoto(100% em casa)
+                                @elseif($job->allocation == 'remote')
+                                    Remoto
                                 @endif
                             </p>
                         </div>

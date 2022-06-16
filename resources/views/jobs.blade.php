@@ -151,8 +151,8 @@
                                             Presencial
                                         @elseif($job->allocation == 'hybrid')
                                             Híbrido
-                                        @else
-                                            Remoto(100% em casa)
+                                        @elseif($job->allocation == 'remote')
+                                            Remoto
                                         @endif,
                                         @if($job->salary)
                                             R$ {{ number_format($job->salary, 2) }}
