@@ -168,7 +168,7 @@
                             </fieldset>
                             <fieldset class="fieldset">
                                 <label class="label" for="working_time">
-                                    Período de trabalho
+                                    Horário de trabalho
                                 </label>
                                 <input
                                     id="working_time"

@@ -15,10 +15,14 @@
                         <span class="item_title">Descrição da vaga</span>
                         <p class="item_description">{{ $job['description'] }}</p>
                     </div>
-                    <div class="two_group_grid">
+                    <div class="three_group_grid">
                         <div>
                             <span class="item_title">Requisitos</span>
                             <p class="item_description">{{ $job['requirements'] }}</p>
+                        </div>
+                        <div>
+                            <span class="item_title">Responsabilidades</span>
+                            <p class="item_description">{{ $job['responsabilities'] }}</p>
                         </div>
                         <div>
                             <span class="item_title">Desejáveis</span>
@@ -40,6 +44,10 @@
                             </p>
                         </div>
                         <div>
+                            <span class="item_title">Horário de trabalho</span>
+                            <p class="item_description">{{ $job['working_time'] }}</p>
+                        </div>
+                        <div>
                             <span class="item_title">Contratação</span>
                             <p class="item_description">@if($job->contract_type == 'clt_full')
                                     CLT de tempo integral
@@ -47,6 +55,17 @@
                                     CLT de tempo parcial
                                 @else
                                     PJ
+                                @endif
+                            </p>
+                        </div>
+                        <div>
+                            <span class="item_title">Alocação</span>
+                            <p class="item_description">@if($job->allocation == 'presential')
+                                    Presencial
+                                @elseif($job->allocation == 'hybrid')
+                                    Híbrido
+                                @else
+                                    Remoto(100% em casa)
                                 @endif
                             </p>
                         </div>
