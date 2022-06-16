@@ -37,6 +37,9 @@
     --jobs-jobs-container-subtitle-size: 1rem;
     --jobs-jobs-container-description-size: 1rem;
 
+    /* Faq sizes */
+    --faq-title-size: 2rem;
+
     /* Footer sizes */
     --footer-text-size: 1rem;
 

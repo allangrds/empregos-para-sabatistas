@@ -33,3 +33,9 @@ Route::middleware(['throttle:8,1'])->group(function () {
     ])->name('user.publish_jobs_post');
 });
 
+Route::get('/duvidas', function () {
+   return view('faq');
+})->name('faq');
+
+
+

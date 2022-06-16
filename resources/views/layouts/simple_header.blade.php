@@ -37,6 +37,14 @@
                                 publique uma vaga
                             </a>
                         </li>
+                        <li>
+                            <a
+                                class="link {{ (Route::currentRouteName() === 'faq') ? 'active' : ''}}"
+                                href="{{ route('faq') }}"
+                            >
+                                dúvidas
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
