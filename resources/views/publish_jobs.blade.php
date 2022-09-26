@@ -11,14 +11,14 @@
             <h2 class="subtitle">preencha as informações da vaga e aguarde pela análise</h2>
 
             @if ($errors->has('page_error'))
-                <div class="alert error">
-                    <p>{{ $errors->first('page_error') }}</p>
-                </div>
+              <div class="alert error">
+                <p>{{ $errors->first('page_error') }}</p>
+              </div>
             @endif
             @if (Session::has('page_success'))
-                <div class="alert success">
-                    <p>{{ Session::get('page_success') }}</p>
-                </div>
+              <div class="alert success">
+                <p>{{ Session::get('page_success') }}</p>
+              </div>
             @endif
             <form method="POST" action="{{ route('user.publish_jobs_post') }}">
                 @csrf
