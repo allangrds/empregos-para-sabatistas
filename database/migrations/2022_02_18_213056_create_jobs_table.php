@@ -23,7 +23,7 @@ class CreateJobsTable extends Migration
             $table->enum('contract_type', ['clt_full', 'clt_part', 'pj']);
             $table->longText('requirements');
             $table->longText('differential')->nullable($value = true);
-            $table->longText('benefits');
+            $table->longText('benefits')->nullable($value = true);
             $table->integer('salary')->nullable($value = true);
             $table->integer('initial_salary')->nullable($value = true);
             $table->integer('final_salary')->nullable($value = true);
