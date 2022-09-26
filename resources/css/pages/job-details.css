@@ -1,0 +1,29 @@
+.job-details .content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.job-details .section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.job-details .title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.job-details .section-two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 730px) {
+  .job-details .section-two-columns {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}

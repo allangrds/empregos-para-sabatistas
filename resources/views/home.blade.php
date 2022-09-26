@@ -1,48 +1,67 @@
 @extends('layouts.simple')
 
 @section('content')
-    <div class="home">
-        <div class="wrapper">
-            <div class="container">
-                <section class="call-to-action">
-                    <h2 class="title">
-                        As <strong>vagas</strong> certas pra quem <strong>guarda o sábado</strong>
-                    </h2>
-                    <p class="subtitle">
-                        Seja pra você que guarda o sábado ou pra você que tem uma empresa e respeita esse dia
-                    </p>
-                    <a class="button primary" href="{{ route('user.jobs') }}">
-                        ver vagas
-                    </a>
-                </section>
-            </div>
+  <div class="wrapper">
+    <div class="container">
+      <div class="home">
+        <div class="call-to-action">
+          <div>
+            <h1 class="title">
+              Vagas para quem guarda o sábado
+            </h1>
+            <h2 class="subtitle">
+              Seja pra você que guarda o sábado ou pra você que tem uma empresa e respeita esse dia
+            </h1>
+            <a class="button" href="{{ route('user.jobs') }}">
+              Ver vagas
+            </a>
+          </div>
+          <img
+            class="illustration"
+            src="{{ asset('images/eastwood-logged-out.png') }}"
+            alt="Pessoa em um escritório com o por do sol atrás"
+          />
         </div>
-        <section class="how-it-works">
-            <div class="wrapper">
-                <div class="container">
-                    <h3 class="title">
-                        Como funciona?
-                    </h3>
-                    <div class="card-container">
-                        <div class="card">
-                            <p class="topic">
-                                1. Cadastro e análise da vaga
-                            </p>
-                            <p class="description">
-                                Qualquer pessoa ou empresa consegue publicar uma vaga de trabalho. Feito isso, essa vaga irá pra uma lista de análise para determinar se ela é válida ou não.
-                            </p>
-                        </div>
-                        <div class="card">
-                            <p class="topic">
-                                2. Pesquisa de vagas
-                            </p>
-                            <p class="description">
-                                Aprovada a vaga, ela estará disponível para pesquisa no site. O usuário poderá consultar as vagas em sua região e ver como se candidatar.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+        <div>
+          <h2 class="title">Como publicar uma vaga</h2>
+          <h3 class="subtitle">veja como é simples publicar uma vaga</h3>
+          <div class="steps-to-publish">
+            <div class="card step">
+              <p class="number">1.</p>
+              <div>
+                <p class="title">
+                  Cadastro da vaga
+                </p>
+                <p class="description">
+                  Você cadastra sua vaga e ela vai pra uma fila de análise.
+                </p>
+              </div>
             </div>
-        </section>
+            <div class="card step">
+              <p class="number">2.</p>
+              <div>
+                <p class="title">
+                  Análise da vaga
+                </p>
+                <p class="description">
+                  As informações da sua vaga são analisadas.
+                </p>
+              </div>
+            </div>
+            <div class="card step">
+              <p class="number">3.</p>
+              <div>
+                <p class="title">
+                  Publicação da vaga
+                </p>
+                <p class="description">
+                  Finalizada a análise, sua vaga é aprovada e visível em nosso site.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 @endsection

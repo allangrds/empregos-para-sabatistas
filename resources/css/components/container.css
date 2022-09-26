@@ -1,10 +1,11 @@
 .wrapper {
-    display: flex;
-    justify-content: center;
-    padding: var(--global-padding);
+  display: flex;
+  justify-content: center;
+  padding-left: var(--global-padding);
+  padding-right: var(--global-padding);
 }
 
 .wrapper > .container {
-    max-width: var(--max-width);
-    width: 100%;
+  max-width: var(--max-width);
+  width: 100%;
 }

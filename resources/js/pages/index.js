@@ -1,33 +1,37 @@
 import publishJob from './publish_job';
+import faq from './faq';
 
 const pages = {
-    'publique-uma-vaga': {
-        init: publishJob,
-    }
+  'duvidas': {
+    init: faq,
+  },
+  'publique-uma-vaga': {
+    init: publishJob,
+  },
 }
 
 function getSelectedPage(cleanedUrl) {
-    let pagesCopy = pages;
-    let initFunction;
+  let pagesCopy = pages;
+  let initFunction;
 
-    cleanedUrl.forEach((element, index, array) => {
-      if (pagesCopy[element]) {
-        pagesCopy = pagesCopy[element];
-      }
+  cleanedUrl.forEach((element, index, array) => {
+    if (pagesCopy[element]) {
+      pagesCopy = pagesCopy[element];
+    }
 
-      if (index === (array.length - 1)) {
-        initFunction = pagesCopy.init;
-      }
-    });
+    if (index === (array.length - 1)) {
+      initFunction = pagesCopy.init;
+    }
+  });
 
-    return initFunction;
-  }
+  return initFunction;
+}
 
-  export default function returnPage(url) {
-    const splitedUrl = url.split('/');
-    const cleanedUrl = splitedUrl[0].length > 0
-      ? splitedUrl
-      : splitedUrl.slice(1, splitedUrl.length);
+export default function returnPage(url) {
+  const splitedUrl = url.split('/');
+  const cleanedUrl = splitedUrl[0].length > 0
+    ? splitedUrl
+    : splitedUrl.slice(1, splitedUrl.length);
 
-    return getSelectedPage(cleanedUrl)();
-  }
+  return getSelectedPage(cleanedUrl)();
+}

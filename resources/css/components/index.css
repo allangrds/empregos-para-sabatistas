@@ -1,6 +1,7 @@
-@import "./alert.css";
 @import "./button.css";
-@import "./card.css";
 @import "./container.css";
-@import "./input.css";
+@import "./text.css";
+@import "./card.css";
+@import "./accordion.css";
 @import "./pagination.css";
+@import "./form.css";

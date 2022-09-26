@@ -1,70 +1,20 @@
 :root {
-    --color-white: #ffffff;
-    --color-black: #000000;
-    --color-gray-1: #F8F8F9;
-    --color-gray-2: #726e7e;
-    --color-gray-3: #464157;
-    --color-gray-4: #dcdbe1;
-    --color-blue-1: #3498db;
-    --color-blue-2: #2980b9;
-    --color-red-1: #e74c3c;
-    --color-green-1: #2ecc71;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-gray-1: #FAFAFC;
+  --color-gray-2: #EFEBEB;
+  --color-red: #e74c3c;
 
-    /* Body */
-    --body-background-color: var(--color-gray-1);
+  /*Page*/
+  --color-background-page: var(--color-gray-1);
 
-    /* Header */
-    --header-background-color: var(--color-white);
-    --header-link-color: var(--color-gray-2);
-    --header-link-active-color: var(--color-black);
+  /*Header*/
+  --color-header-menu-links: var(--color-black);
 
-    /* Input */
-    --input-border-color: var(--color-black);
-    --input-error-color: var(--color-red-1);
+  /*Header*/
+  --color-border-color: var(--color-gray-2);
 
-    /* Button */
-    --button-disabled-background-color: var(--color-gray-4);
-    --button-disabled-color: var(--color-gray-3);
-
-
-    --button-primary-background-color: var(--color-blue-1);
-    --button-primary-background-color-hover: var(--color-blue-2);
-    --button-primary-color: var(--color-white);
-
-    --button-outline-background-color: var(--color-white);
-    --button-outline-background-color-hover: var(--color-blue-2);
-    --button-outline-color: var(--color-blue-1);
-    --button-outline-color-hover: var(--color-white);
-    --button-outline-border-color: var(--color-blue-1);
-    --button-outline-border-color-hover: var(--color-blue-2);
-
-    /* Card */
-    --card-background-color: var(--color-white);
-
-    /* Alert */
-    --alert-success-background-color: var(--color-green-1);
-    --alert-success-color: var(--color-white);
-    --alert-error-background-color: var(--color-red-1);
-    --alert-error-color: var(--color-white);
-
-    /* Pagination */
-    --pagination-link-border-color: var(--color-gray-4);
-    --pagination-link-color: var(--color-blue-2);
-    --pagination-link-color-disabled: var(--color-gray-2);
-
-    /* Home */
-    --home-background-color: var(--color-white);
-    --home-border-color: var(--color-gray-4);
-    --home-call-to-action-title-color: var(--color-black);
-    --home-call-to-action-subtitle-color: var(--color-gray-3);
-    --home-how-it-works-background-color: var(--color-blue-1);
-    --home-how-it-works-title-color: var(--color-white);
-    --home-how-it-works-card-topic-color: var(--color-black);
-    --home-how-it-works-card-description-color: var(--color-gray-3);
-
-    /* Jobs */
-    --jobs-background-color: var(--color-white);
-    --jobs-jobs-container-title-color: var(--color-black);
-    --jobs-jobs-container-subtitle-color: var(--color-black);
-    --jobs-jobs-container-description-color: var(--color-gray-3);
+  /*Button*/
+  --color-button-background-color: var(--color-black);
+  --color-button-color: var(--color-white);
 }
