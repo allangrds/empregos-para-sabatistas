@@ -30,7 +30,7 @@ class StoreJobRequest extends FormRequest
             'contract_type' => 'required|max:255',
             'requirements' => 'required|max:1200',
             'differential' => 'nullable|max:1200',
-            'benefits' => 'required|max:1200',
+            'benefits' => 'max:1200',
             'salary' => 'nullable|numeric|max:50000',
             'initial_salary' => 'nullable|numeric|max:50000',
             'final_salary' => 'nullable|numeric|max:50000',

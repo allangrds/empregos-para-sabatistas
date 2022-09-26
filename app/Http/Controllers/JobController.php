@@ -174,10 +174,16 @@ class JobController extends Controller
             $differential = preg_replace("/\r\n|\r|\n/", '<br/>', $formValues['differential']);
             $benefits = preg_replace("/\r\n|\r|\n/", '<br/>', $formValues['benefits']);
             $responsabilities = preg_replace("/\r\n|\r|\n/", '<br/>', $formValues['responsabilities']);
-            $howToApply = $formValues['how_to_apply_telephone'] || $formValues['how_to_apply_email'] || $formValues['how_to_apply_site'];
+            $howToApply =
+              $formValues['how_to_apply_telephone']
+                ? "Ligue ou mande mensagem para ".$formValues['how_to_apply_telephone']
+                : ($formValues['how_to_apply_email']
+                  ? "Envie um e-mail para ".$formValues['how_to_apply_email']
+                  : "Acesse o site ".$formValues['how_to_apply_site']);
 
             Job::create([
               ...$formValues,
+              'benefits' => $benefits,
               'description' => $description,
               'requirements' => $requirements,
               'differential' => $differential,

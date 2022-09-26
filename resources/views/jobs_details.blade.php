@@ -41,10 +41,12 @@
                                 <p class="title">Requisitos</p>
                                 <p>{!! $job->requirements !!}</p>
                             </div>
-                            <div class="section">
+                            @if ($job->differential)
+                              <div class="section">
                                 <p class="title">Diferenciais</p>
                                 <p>{!! $job->differential !!}</p>
-                            </div>
+                              </div>
+                            @endif
                         </div>
                         <div class="section-two-columns">
                             <div class="section">
@@ -60,10 +62,12 @@
                                     @endif
                                 </p>
                             </div>
-                            <div class="section">
-                                <p class="title">Benefícios</p>
-                                <p>{{ $job->benefits }}</p>
-                            </div>
+                            @if ($job->benefits)
+                              <div class="section">
+                                  <p class="title">Benefícios</p>
+                                  <p>{{ $job->benefits }}</p>
+                              </div>
+                            @endif
                         </div>
                         <div class="section">
                           <p class="title">Como se candidatar</p>
