@@ -165,8 +165,8 @@ class JobController extends Controller
                 throw new Exception("A cidade não existe");
             }
 
-            $jobName = strtolower(str_replace(' ', '-', $formValues['job_name']));
-            $companyName = strtolower(str_replace(' ', '-', $formValues['company_name']));
+            $jobName = strtolower(str_replace(array(' ','/','&'), '-', $formValues['job_name']));
+            $companyName = strtolower(str_replace(array(' ','/','&'), '-', $formValues['company_name']));
             $uuid = substr(Str::uuid(), 0, 17);
             $slug = "$jobName-$companyName-$uuid";
             $description = preg_replace("/\r\n|\r|\n/", '<br/>', $formValues['description']);

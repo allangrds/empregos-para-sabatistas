@@ -65,7 +65,7 @@
                             @if ($job->benefits)
                               <div class="section">
                                   <p class="title">Benefícios</p>
-                                  <p>{{ $job->benefits }}</p>
+                                  <p>{!! $job->benefits !!}</p>
                               </div>
                             @endif
                         </div>
