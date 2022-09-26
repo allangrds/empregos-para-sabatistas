@@ -1,9 +1,0 @@
-.faq .title {
-    font-size: var(--faq-title-size);
-    font-weight: 600;
-    margin-bottom: 18px;
-}
-
-.faq .accordion {
-    margin-bottom: 20px;
-}
