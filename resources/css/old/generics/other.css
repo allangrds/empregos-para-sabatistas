@@ -1,0 +1,12 @@
+html {
+    font-size: 18px;
+    font-family: 'Roboto', Tahoma, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--body-background-color);
+}
+
+ul {
+    padding: 0;
+}

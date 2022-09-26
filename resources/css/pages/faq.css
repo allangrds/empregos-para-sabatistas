@@ -1,9 +1,12 @@
-.faq .title {
-    font-size: var(--faq-title-size);
-    font-weight: 600;
-    margin-bottom: 18px;
+.faq > .title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
 }
 
-.faq .accordion {
-    margin-bottom: 20px;
+.faq > .category {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }

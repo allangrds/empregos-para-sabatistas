@@ -1,12 +1,8 @@
 html {
-    font-size: 18px;
-    font-family: 'Roboto', Tahoma, Verdana, sans-serif;
+  font-size: 16px;
+  font-family: 'Plus Jakarta Sans', Tahoma, Verdana, sans-serif;
 }
 
 body {
-    background-color: var(--body-background-color);
-}
-
-ul {
-    padding: 0;
+  background-color: var(--color-background-page);
 }

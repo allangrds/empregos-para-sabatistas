@@ -169,12 +169,23 @@ class JobController extends Controller
             $companyName = strtolower(str_replace(' ', '-', $formValues['company_name']));
             $uuid = substr(Str::uuid(), 0, 17);
             $slug = "$jobName-$companyName-$uuid";
+            $description = preg_replace("/\r\n|\r|\n/", '<br/>', $formValues['description']);
+            $requirements = preg_replace("/\r\n|\r|\n/", '<br/>', $formValues['requirements']);
+            $differential = preg_replace("/\r\n|\r|\n/", '<br/>', $formValues['differential']);
+            $benefits = preg_replace("/\r\n|\r|\n/", '<br/>', $formValues['benefits']);
+            $responsabilities = preg_replace("/\r\n|\r|\n/", '<br/>', $formValues['responsabilities']);
+            $howToApply = $formValues['how_to_apply_telephone'] || $formValues['how_to_apply_email'] || $formValues['how_to_apply_site'];
 
             Job::create([
-                ...$formValues,
-                'slug' => $slug,
-                'state_id' => $choosedState->id,
-                'city_id' => $choosedCity->id,
+              ...$formValues,
+              'description' => $description,
+              'requirements' => $requirements,
+              'differential' => $differential,
+              'responsabilities' => $responsabilities,
+              'slug' => $slug,
+              'state_id' => $choosedState->id,
+              'city_id' => $choosedCity->id,
+              'how_to_apply' => $howToApply,
             ]);
 
             return back()->with('page_success','Vaga enviada com sucesso. Agora é só aguardar pela aprovação');

@@ -1,9 +1,11 @@
-.footer {
-    padding-top: 15px;
-    padding-bottom: 15px;
+.footer .content {
+  border-top: 1px solid var(--color-border-color);
+  padding-bottom: 32px;
+  padding-top: 32px;
+  margin-top: 60px;
 }
 
-.footer > .text {
-    text-align: center;
-    font-size: var(--footer-text-size);
+.footer .text {
+  text-align: center;
+  font-size: 1rem;
 }

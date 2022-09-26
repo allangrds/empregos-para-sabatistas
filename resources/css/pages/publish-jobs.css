@@ -1,0 +1,71 @@
+.publish-jobs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.publish-jobs .title {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.publish-jobs .subtitle {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.publish-jobs .four-fields {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.publish-jobs .two-fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.publish-jobs .three-fields {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.publish-jobs .four-fields,
+.publish-jobs .three-fields,
+.publish-jobs .two-fields {
+  margin-top: 20px;
+}
+
+.publish-jobs .error_message {
+  color: var(--color-red);
+  font-size: 0.75rem;
+  height: 1rem;
+}
+
+@media (max-width: 592px) {
+  .publish-jobs .three-fields,
+  .publish-jobs .four-fields {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 593px) and (max-width: 852px) {
+  .publish-jobs .three-fields,
+  .publish-jobs .four-fields {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 930px) {
+  .publish-jobs .two-fields {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 853px) and (max-width: 1097px) {
+  .publish-jobs .four-fields {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
