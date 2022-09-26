@@ -4,6 +4,7 @@
   --color-gray-1: #FAFAFC;
   --color-gray-2: #EFEBEB;
   --color-red: #e74c3c;
+  --color-green: #27ae60;
 
   /*Page*/
   --color-background-page: var(--color-gray-1);

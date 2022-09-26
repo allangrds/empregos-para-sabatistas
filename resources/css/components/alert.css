@@ -1,0 +1,16 @@
+.alert {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.alert.error {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+.alert.success {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
