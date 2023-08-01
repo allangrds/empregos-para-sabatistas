@@ -70,6 +70,14 @@ class JobController extends Controller
                 'text' => 'PJ',
                 'name' => 'pj'
             ),
+            array(
+              'text' => 'Temporário',
+              'name' => 'temporary'
+            ),
+            array(
+              'text' => 'Estágio',
+              'name' => 'internship'
+            ),
         );
         $allocations = array(
             array(
@@ -115,6 +123,14 @@ class JobController extends Controller
             array(
                 'text' => 'PJ',
                 'name' => 'pj'
+            ),
+            array(
+              'text' => 'Temporário',
+              'name' => 'temporary'
+            ),
+            array(
+              'text' => 'Estágio',
+              'name' => 'internship'
             ),
         );
         $allocations = array(

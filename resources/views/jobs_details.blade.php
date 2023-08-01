@@ -12,6 +12,10 @@
                     CLT de tempo integral |
                 @elseif($job->contract_type == 'clt_part')
                     CLT de tempo parcial |
+                @elseif($job->contract_type == 'temporary')
+                    Temporário |
+                @elseif($job->contract_type == 'internship')
+                    Estágio |
                 @else
                     PJ |
                 @endif
