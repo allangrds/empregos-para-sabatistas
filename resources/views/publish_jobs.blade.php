@@ -242,7 +242,7 @@
                     </div>
                     <div class="card">
                         <h2 class="title">Como se candidatar</h2>
-                        <p class="subtitle">escolha apenas uma das opções abaixo</p>
+                        <p class="subtitle">informe os meios que o candidato pode se cadastrar na vaga</p>
                         <div class="three-fields">
                             <fieldset class="fieldset">
                                 <label class="label" for="how_to_apply_telephone">

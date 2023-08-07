@@ -75,7 +75,18 @@
                         </div>
                         <div class="section">
                           <p class="title">Como se candidatar</p>
-                          <p>{{ $job->how_to_apply }}</p>
+                          @if (empty($job->how_to_apply_telephone) && empty($job->how_to_apply_email) && empty($job->how_to_apply_site) && $job->how_to_apply)
+                            <p>{{ $job->how_to_apply }}</p>
+                          @endif
+                          @if ($job->how_to_apply_telephone)
+                            <p>{{ $job->how_to_apply_telephone }}</p>
+                          @endif
+                          @if ($job->how_to_apply_email)
+                            <p>{{ $job->how_to_apply_email }}</p>
+                          @endif
+                          @if ($job->how_to_apply_site)
+                            <p>{{ $job->how_to_apply_site }}</p>
+                          @endif
                         </div>
                     </div>
                 </div>

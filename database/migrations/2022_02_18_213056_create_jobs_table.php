@@ -27,7 +27,9 @@ class CreateJobsTable extends Migration
             $table->integer('salary')->nullable($value = true);
             $table->integer('initial_salary')->nullable($value = true);
             $table->integer('final_salary')->nullable($value = true);
-            $table->longText('how_to_apply');
+            $table->longText('how_to_apply_telephone');
+            $table->longText('how_to_apply_email');
+            $table->longText('how_to_apply_site');
             $table->string('zipcode');
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')
